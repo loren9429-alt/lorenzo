@@ -1,0 +1,90 @@
+/* Estilos generales */
+:root{
+  --accent:#ff6f61;
+  --accent-2:#f7b42c;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
+}
+*{box-sizing:border-box}
+body{
+  font-family: Inter, 'Segoe UI', Arial, sans-serif;
+  margin:0;
+  color:#222;
+  background: var(--bg-gradient);
+}
+.container{max-width:1100px}
+.site-header{background:linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)); color:#fff}
+.site-header .brand{display:flex;align-items:center;gap:12px}
+.site-header .logo{width:64px;height:64px}
+.site-header h1{margin:0;font-size:1.25rem}
+.site-header .tagline{margin:0;font-size:.9rem;color:#ddd}
+.main-nav a{color:var(--accent);font-weight:600;margin-left:14px;text-decoration:none}
+.main-nav a:hover{color:var(--accent-2)}
+
+main{background: #f8fafc; border-radius:10px; padding:18px; margin:20px auto}
+.hero{background:linear-gradient(180deg,#fff 0%, #fff7ea 100%); box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+h2,h3{color:var(--accent)}
+
+/* Torneos */
+.torneo-card{background:#fff; border-radius:8px; padding:12px; box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.torneo-actions{display:flex; gap:8px; margin-top:8px}
+
+/* Formularios */
+form{background:transparent}
+label{font-weight:600}
+input, select, textarea{border-radius:6px;border:1px solid #d1d5db;padding:8px}
+button.btn-primary{background:var(--accent);border:0}
+button.btn-primary:hover{background:var(--accent-2)}
+
+/* Admin list */
+.list-group .list-group-item{display:flex;justify-content:space-between;align-items:center}
+
+/* Footer */
+.site-footer{background:#0b1220;color:#fff}
+
+/* Responsive gallery */
+@media (max-width: 768px){
+  .site-header .brand{gap:8px}
+  .site-header .logo{width:48px;height:48px}
+}
+
+/* Small helpers */
+.text-danger{color:#c0392b}
+
+/* Audio overlay when autoplay is blocked */
+.audio-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.25));
+  border-radius:8px;
+}
+.audio-overlay .audio-overlay-inner{padding:12px}
+.audio-overlay button{min-width:160px}
+
+/* Lightbox (mini, accessible) */
+.lightbox-overlay{
+  position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:1050;
+  background:rgba(0,0,0,0.85);padding:20px;
+}
+.lightbox-content{position:relative;max-width:1100px;width:100%;max-height:90vh;display:flex;align-items:center;gap:12px}
+.lightbox-media{flex:1 1 auto;display:flex;align-items:center;justify-content:center}
+.lightbox-media img{max-width:100%;max-height:85vh;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.lightbox-caption{color:#fff;margin-top:10px;text-align:center;font-size:0.95rem}
+.lightbox-close,.lightbox-prev,.lightbox-next{background:transparent;border:0;color:#fff;font-size:28px;cursor:pointer}
+.lightbox-close{position:absolute;right:6px;top:6px;padding:6px}
+.lightbox-prev,.lightbox-next{padding:8px}
+.lightbox-prev{margin-right:6px}
+.lightbox-next{margin-left:6px}
+.lightbox-close:focus,.lightbox-prev:focus,.lightbox-next:focus{outline:2px solid #fff;outline-offset:3px}
+
+@media (max-width:576px){
+  .lightbox-content{flex-direction:column}
+  .lightbox-prev,.lightbox-next{font-size:22px}
+}
+
+/* Sponsors logos styling */
+.sponsors-grid{margin-top:8px}
+.sponsor-logo{max-height:56px;max-width:180px;object-fit:contain;background:#fff;padding:6px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+@media (max-width:576px){.sponsor-logo{max-height:44px}}
